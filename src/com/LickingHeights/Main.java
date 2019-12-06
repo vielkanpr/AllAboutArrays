@@ -5,19 +5,19 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         int size = 10;
-        int lowestNumber = 0;
-        int highestNumber = 10;
+        int lowestNumber = 80;
+        int highestNumber = 90;
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
+        //printArray(array);
+        System.out.println("The sum of the array is "+ sum(array));
 
-        Pattern1();
-        Pattern2();
-        Pattern3();
-        Pattern4();
-        Pattern5();
-
-
+//        Pattern1();
+//        Pattern2();
+//        Pattern3();
+//        Pattern4();
+//        Pattern5();
     }
 
     public static int[] createNumberArray(int size, int lowestNumber, int highestNumber) {
@@ -31,6 +31,7 @@ public class Main {
         return array;
     }
 
+
     public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
@@ -42,6 +43,22 @@ public class Main {
         int number = (int) ((Math.random() * (highestNumber - lowestNumber + 1)) + lowestNumber);
         return number;
     }
+
+
+    public static int sum(int[] array){
+        int sum = 0;
+
+        for(int i=0; i<array.length; i++){
+            sum += array[i];
+
+        }
+
+        return sum;
+    }
+
+
+
+
 
     public static void Pattern1() {
         for (int rows = 0; rows < 6; rows++) {
