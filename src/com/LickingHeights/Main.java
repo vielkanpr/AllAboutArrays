@@ -10,8 +10,11 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
-        //printArray(array);
-        System.out.println("The sum of the array is "+ sum(array));
+
+        //System.out.println("The sum of the array is "+ sum(array));
+        System.out.println("The minimum of the array is "+ min(array));
+        printArray(array);
+        //System.out.println("The maximum of the array is "+ max(array));
 
 //        Pattern1();
 //        Pattern2();
@@ -22,22 +25,17 @@ public class Main {
 
     public static int[] createNumberArray(int size, int lowestNumber, int highestNumber) {
         int[] array = new int[size];
-
         //fill with random values
         for (int i = 0; i < size; i++) {
             array[i] = createRandomNumber(lowestNumber, highestNumber);
         }
-
         return array;
     }
-
-
     public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
     }
-
     public static int createRandomNumber(int lowestNumber, int highestNumber) {
 
         int number = (int) ((Math.random() * (highestNumber - lowestNumber + 1)) + lowestNumber);
@@ -45,17 +43,45 @@ public class Main {
     }
 
 
+
+
     public static int sum(int[] array){
         int sum = 0;
 
         for(int i=0; i<array.length; i++){
             sum += array[i];
-
         }
-
         return sum;
     }
 
+
+
+
+
+    public static int min(int[] array) {
+        int min =array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+
+                min= array[i];
+            }
+        }
+        return min;
+    }
+
+
+
+
+
+    public static int max(int[] array) {
+        int max = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            max += array[i];
+        }
+        return max;
+    }
 
 
 
