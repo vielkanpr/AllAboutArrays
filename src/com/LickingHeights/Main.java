@@ -11,13 +11,16 @@ public class Main {
         int highestNumber = 90;
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
-        String[] adjectives= {"ugly", "tall", "big", "tiny"};
-        String[] places= {"McDonalds", "Home", "Bathroom", "Store"};
-        String[] people= {"Alex", "Bella", "Ssarah", "Amber"};
-        String[] verbs= {"Running", "Walking" ,"Breathing" ,"Talking"};
-        String[] times= {"4:00", "7:15" ,"2:40" ,"3:33"};
-        String[] things= {"Hot Cheetos", "Cheetah" ,"Dog" ,"Toothbrush"};
-
+        //String[] adjectives= {"ugly ", "tall ", "big ", "tiny "};
+        //String[] places= {"McDonalds", "home", "bathroom", "store"};
+        //String[] people= {"Alex", "Bella", "Sarah", "Amber"};
+        //String[] verbs= {"running", "walking" ,"breathing" ,"talking"};
+        //String[] times= {"4:00", "7:15" ,"2:40" ,"3:33"};
+        //String[] things= {" Hot Cheetos", " cheetah" ," dog" ," toothbrush"};
+        //System.out.println("I was "+ sentenceGenerator(verbs)+ " down the "+ sentenceGenerator(places));
+        //System.out.println(" around "+sentenceGenerator(times)+ " with my best friend "+ sentenceGenerator(people));
+        //System.out.println(" and we "+sentenceGenerator(verbs)+ " a  "+ sentenceGenerator(adjectives)+ sentenceGenerator(things));
+        //System.out.println("that was "+sentenceGenerator(verbs)+sentenceGenerator(things)+"s");
         //System.out.println("The sum of the array is "+ sum(array));
         //System.out.println("The minimum of the array is "+ min(array));
         //System.out.println("The maximum of the array is "+ max(array));
@@ -28,12 +31,20 @@ public class Main {
 //        Pattern4();
 //        Pattern5();
           //bubbleSort();
+        String[] sizes= {"Big", "lil", "Tiny"};
+        String[] color= {" red"," blue", " purple"};
+        String[] item= {" fish ", " clock", " time"};
+        System.out.println(print80sRapperName(sizes)+print80sRapperName(color)+print80sRapperName(item));
+
     }
-        public static String randomword(String[] array){
+        public static String sentenceGenerator(String[] array){
         Random random = new Random();
             return array [random.nextInt(array.length)];
         }
-
+        public static String print80sRapperName(String[] array){
+        Random random = new Random();
+            return array [random.nextInt(array.length)];
+        }
 
 
     public static int[] createNumberArray(int size, int lowestNumber, int highestNumber) {
